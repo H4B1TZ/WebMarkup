@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap");
+
+* {
+  /* css reset */
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+h1,
+h3 {
+  font-family: "Lora", serif;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  position: fixed;
+  width: 100%;
+  background: #ffffffb6;
+  z-index: 2;
+}
+
+nav img {
+  width: 50px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul a {
+  color: black;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin: 0 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+nav ul a:hover {
+  opacity: 0.5;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 130px;
+}
+
+header section:first-child {
+  width: 30%;
+}
+
+header section:first-child h1 {
+  font-size: 6rem;
+}
+header section:first-child h2 {
+  width: 90%;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+header section:last-child {
+  width: 40%;
+  position: relative;
+}
+
+header section:last-child img:last-child {
+  position: absolute;
+  top: -200px;
+  z-index: -1;
+  width: 200%;
+  left: -500px;
+}
