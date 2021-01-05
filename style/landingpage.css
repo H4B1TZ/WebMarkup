@@ -31,6 +31,10 @@ nav {
   z-index: 2;
 }
 
+nav > section {
+  display: none;
+}
+
 nav a {
   display: flex;
   align-items: center;
@@ -59,6 +63,10 @@ nav ul a {
 
 nav ul a:hover {
   opacity: 0.5;
+}
+
+nav:nth-child(3) {
+  display: none;
 }
 
 header {
@@ -133,6 +141,10 @@ section:nth-child(4) {
   align-items: center;
   padding: 300px 0;
   position: relative;
+}
+
+section:nth-child(4) > section {
+  display: none;
 }
 
 section:nth-child(4) h3 {
@@ -289,4 +301,197 @@ footer section:last-child {
   align-items: center;
   width: 35%;
   background: rgba(235, 235, 235, 0.5);
+}
+
+@media (max-width: 1179px) {
+  header section:first-child {
+    width: 50%;
+  }
+
+  header section:first-child h1 {
+    font-size: 4rem;
+  }
+
+  section:nth-child(4) {
+    padding-top: 150px;
+  }
+
+  section:nth-child(4) > section {
+    display: inherit;
+    margin-bottom: 150px;
+    background: rgba(255, 255, 255, 0.726);
+    border: 1px solid #f2f4f8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 10px 11px -8px #ccc;
+    width: 80%;
+    flex-direction: column;
+  }
+
+  section:nth-child(4) > section h4 {
+    font-size: 2rem;
+  }
+
+  section:nth-child(4) > section ol {
+    font-size: 1.5rem;
+    margin: 0 auto;
+  }
+
+  section:nth-child(4) > section ol li {
+    padding: 20px;
+  }
+
+  section:nth-child(4) > section a {
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: #207899;
+    letter-spacing: 1px;
+  }
+
+  section:nth-child(5) aside {
+    display: none;
+  }
+
+  section:nth-child(5) section {
+    width: 100%;
+  }
+
+  section:nth-child(5) section article {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  section:nth-child(5) section article section img {
+    width: 80%;
+  }
+
+  section:nth-child(5) section header:nth-child(1) {
+    width: 100%;
+  }
+
+  header section:last-child img:last-child {
+    top: -155px;
+    width: 221%;
+    left: -446px;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 400px) {
+  header {
+    flex-direction: column-reverse;
+  }
+
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav ul:nth-child(2) {
+    display: none;
+  }
+
+  nav > section {
+    display: inherit;
+  }
+
+  nav > section > input {
+    visibility: hidden;
+  }
+
+  nav > section > label > img {
+    width: 50px;
+  }
+
+  nav > section > label > img:hover {
+    cursor: pointer;
+  }
+
+  nav > section > ol > li {
+    list-style-type: none;
+    display: none;
+  }
+
+  nav > section > input:checked ~ ol > li {
+    display: inherit;
+    right: 0;
+    top: 100px;
+    animation: fade 1s ease;
+  }
+
+  nav > section > ol {
+    position: absolute;
+    width: 60%;
+    border-radius: 10px;
+    margin-top: 60px;
+    right: 10px;
+    background: #207899;
+  }
+
+  nav > section > ol > li > a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+
+  nav > section > ol > li > a:hover {
+    color: #ccc;
+  }
+
+  header section:first-child {
+    margin-top: 70px;
+    width: 80%;
+    text-align: center;
+  }
+
+  header section:first-child h2 {
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+  header section:first-child a {
+    margin: 40px auto;
+    width: 200px;
+  }
+
+  header section:last-child {
+    width: 80%;
+  }
+
+  section:nth-child(4) h3 {
+    font-size: 2rem;
+  }
+
+  section:nth-child(4) {
+    padding-bottom: 100px;
+  }
+
+  section:nth-child(4) iframe {
+    width: 90%;
+    height: 220px;
+  }
+
+  section:nth-child(4) > section ol {
+    padding-left: 40px;
+  }
+
+  section:nth-child(5) section article {
+    flex-direction: column-reverse;
+    border-bottom: 1px solid black;
+  }
+
+  section:nth-child(5) section header:nth-child(1) {
+    margin-right: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
