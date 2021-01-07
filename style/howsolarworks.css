@@ -70,6 +70,10 @@ nav ul a:hover {
   opacity: 0.5;
 }
 
+nav > section {
+  display: none;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -189,6 +193,45 @@ article:nth-child(6) {
   grid-area: six;
 }
 
+aside {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+aside > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside > h3 {
+  font-size: 2rem;
+}
+aside > article > img {
+  width: 50%;
+}
+
+aside > article > a {
+  text-decoration: none;
+  background: #207899;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  border: 1px solid #207899;
+  font-size: 0.9rem;
+  margin: 20px;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+aside > article > a:hover {
+  color: #207899;
+  border: 1px solid #207899;
+  background: transparent;
+}
+
 footer {
   display: flex;
   margin-bottom: 0;
@@ -212,4 +255,149 @@ footer section:last-child {
   width: 35%;
   margin: 0;
   background: rgba(235, 235, 235, 0.5);
+}
+
+@media (max-width: 1179px) {
+  section:nth-child(4) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "one two"
+      "three five"
+      "six six";
+  }
+
+  article:nth-child(4) {
+    display: none;
+  }
+
+  section article p:nth-child(4) {
+    display: none;
+  }
+
+  aside > article:last-child {
+    display: none;
+  }
+
+  footer section:first-child {
+    width: 50%;
+  }
+
+  footer section:last-child {
+    width: 50%;
+  }
+
+  header img[alt="blob wallpaper"] {
+    top: -122px;
+    right: 292px;
+    width: 81%;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 400px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav ul:nth-child(2) {
+    display: none;
+  }
+
+  nav > section {
+    display: inherit;
+  }
+
+  nav > section > input {
+    visibility: hidden;
+  }
+
+  nav > section > label > img {
+    width: 50px;
+  }
+
+  nav > section > label > img:hover {
+    cursor: pointer;
+  }
+
+  nav > section > ol > li {
+    list-style-type: none;
+    display: none;
+  }
+
+  nav > section > input:checked ~ ol > li {
+    display: inherit;
+    right: 0;
+    top: 100px;
+    animation: fade 1s ease;
+  }
+
+  nav > section > ol {
+    position: absolute;
+    width: 60%;
+    border-radius: 10px;
+    margin-top: 60px;
+    right: 10px;
+    background: #207899;
+  }
+
+  nav > section > ol > li > a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+
+  nav > section > ol > li > a:hover {
+    color: #ccc;
+  }
+
+  header > aside:first-child {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  aside:first-child a {
+    margin: 0;
+  }
+
+  header > aside:last-child {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  header aside:last-child h2 {
+    width: 100%;
+  }
+
+  section:nth-child(4) {
+    display: flex;
+    padding: 0;
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+
+  article:nth-child(6) {
+    display: none;
+  }
+  article:nth-child(4) {
+    display: none;
+  }
+
+  aside > article:last-child {
+    display: inherit;
+  }
+
+  aside {
+    flex-direction: column;
+  }
+
+  aside article {
+    margin: 20px;
+  }
 }

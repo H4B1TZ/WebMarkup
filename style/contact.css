@@ -20,6 +20,10 @@ body {
   /* overflow-x: hidden; */
 }
 
+nav > section {
+  display: none;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -211,4 +215,99 @@ footer section:last-child {
   align-items: center;
   width: 35%;
   background: rgba(235, 235, 235, 0.5);
+}
+
+@media (max-width: 1179px) {
+  main > section > form {
+    width: 650px;
+  }
+
+  header aside:first-child {
+    width: 16%;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 400px) {
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav ul:nth-child(2) {
+    display: none;
+  }
+
+  nav > section {
+    display: inherit;
+  }
+
+  nav > section > input {
+    visibility: hidden;
+  }
+
+  nav > section > label > img {
+    width: 50px;
+  }
+
+  nav > section > label > img:hover {
+    cursor: pointer;
+  }
+
+  nav > section > ol > li {
+    list-style-type: none;
+    display: none;
+  }
+
+  nav > section > input:checked ~ ol > li {
+    display: inherit;
+    right: 0;
+    top: 100px;
+    animation: fade 1s ease;
+  }
+
+  nav > section > ol {
+    position: absolute;
+    width: 60%;
+    border-radius: 10px;
+    margin-top: 60px;
+    right: 10px;
+    background: #207899;
+  }
+
+  nav > section > ol > li > a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+
+  nav > section > ol > li > a:hover {
+    color: #ccc;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  header aside:first-child {
+    width: 40%;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header aside:last-child {
+    margin-top: 100px;
+  }
+
+  main > section > form {
+    width: 485px;
+  }
+
+  main > aside {
+    width: 100%;
+    margin-left: 0;
+  }
 }
