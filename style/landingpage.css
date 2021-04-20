@@ -141,26 +141,31 @@ section:nth-child(4) {
   position: relative;
 }
 
-section:nth-child(4) > section {
+section:nth-of-type(1) > section {
   display: none;
 }
 
-section:nth-child(4) h3 {
+h3 {
   font-size: 2.5rem;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
 }
 
-section:nth-child(4) iframe {
+h3 iframe {
   width: 1031px;
   height: 579px;
   outline: 0;
   border: 0;
-  margin: 0 auto;
+  margin: 50px auto;
   border-radius: 10px;
   filter: drop-shadow(2px 4px 6px #cccc);
 }
 
-section:nth-child(4) img {
+img[alt="background blob"] {
   position: absolute;
   top: 800px;
   z-index: -1;
@@ -168,24 +173,74 @@ section:nth-child(4) img {
   left: -292px;
 }
 
+img[alt="desc"] {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  section:nth-child(4) h4,
+  section:nth-child(4) ol,
+  section:nth-child(4) a {
+    display: inherit;
+  }
+
+  section:nth-child(3) img {
+    top: 200px;
+  }
+
+  section:nth-child(3) h4,
+  section:nth-child(3) ol,
+  section:nth-child(3) a {
+    display: none;
+  }
+
+  img:nth-child(4) {
+    position: absolute;
+    top: 800px;
+    z-index: -1;
+    width: 100%;
+    left: -292px;
+  }
+
+  section:nth-child(3) img {
+    position: absolute;
+    top: 800px;
+    z-index: -1;
+    width: 100%;
+    left: -292px;
+  }
+
+  section:nth-child(4) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  section > aside {
+    margin-top: -450px;
+  }
+}
+
 section:nth-child(5) {
   display: flex;
   justify-content: center;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 
-section:nth-child(5) section {
+section section {
   width: 50%;
 }
 
-section:nth-child(5) section article {
+section article {
   display: flex;
   justify-content: center;
   margin: 20px;
   padding: 20px;
 }
 
-section:nth-child(5) section header:nth-child(1) {
+section header:nth-child(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,17 +250,17 @@ section:nth-child(5) section header:nth-child(1) {
   margin-right: 50px;
 }
 
-section:nth-child(5) section header:nth-child(1) h4 {
+section header:nth-child(1) h4 {
   font-size: 1.3rem;
   margin-bottom: 30px;
 }
 
-section:nth-child(5) section header:nth-child(1) p {
+section header:nth-child(1) p {
   text-align: justify;
   line-height: 1.5rem;
 }
 
-section:nth-child(5) section header:nth-child(1) a {
+section header:nth-child(1) a {
   text-decoration: none;
   background: #207899;
   color: white;
@@ -218,60 +273,60 @@ section:nth-child(5) section header:nth-child(1) a {
   transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 
-section:nth-child(5) section header:nth-child(1) a:hover {
+section header:nth-child(1) a:hover {
   color: #207899;
   border: 1px solid #207899;
   background: transparent;
 }
 
-section:nth-child(5) section article section {
+section article section {
   display: flex;
   flex-direction: column;
 }
 
-section:nth-child(5) section article section img {
+section article section img {
   width: 100%;
   margin: 0 auto;
 }
 
-section:nth-child(5) section article section span {
+section article section span {
   font-size: 0.8rem;
   text-align: center;
   padding-right: 20px;
   padding-top: 20px;
 }
 
-section:nth-child(5) section article section a {
+section article section a {
   text-decoration: none;
   color: #207899;
 }
 
-section:nth-child(5) aside {
+section > aside {
   width: 20%;
   border: 1px solid #f2f4f8;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 5px 10px 11px -8px #ccc;
   height: 450px;
-  margin-top: 50px;
+  margin-top: -150px;
   margin-left: 50px;
 }
 
-section:nth-child(5) aside h4 {
+section > aside h4 {
   font-size: 2rem;
   text-align: center;
 }
 
-section:nth-child(5) aside ol {
+section aside ol {
   margin: 20px;
 }
 
-section:nth-child(5) aside ol li {
+section > aside ol li {
   margin: 20px 0;
   font-size: 1.3rem;
 }
 
-section:nth-child(5) aside a {
+aside a {
   text-decoration: none;
   color: #207899;
   font-size: 0.8rem;
@@ -298,7 +353,7 @@ footer section:last-child {
   justify-content: center;
   align-items: center;
   width: 35%;
-  background: rgba(255, 170, 0, 0.5);
+  background: rgba(235, 235, 235, 0.5);
 }
 
 @media (max-width: 1179px) {
@@ -314,7 +369,7 @@ footer section:last-child {
     padding-top: 150px;
   }
 
-  section:nth-child(4) > section {
+  section:nth-of-type(1) > section {
     display: inherit;
     margin-bottom: 150px;
     background: rgba(255, 255, 255, 0.726);
@@ -493,3 +548,4 @@ footer section:last-child {
     opacity: 1;
   }
 }
+/* Credits Jelle de Vries */
