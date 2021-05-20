@@ -7,7 +7,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+p::first-letter {
+  font-size: 200%;
+}
 h1,
 h3,
 h4 {
@@ -49,6 +51,7 @@ nav a span {
 
 nav a img {
   width: 50px;
+  float: none;
 }
 
 nav ul {
@@ -146,8 +149,9 @@ main > section > form > fieldset > input {
 }
 
 main > section > form > fieldset > input[type="submit"] {
-  border: 1px solid #207899;
-  background: #207899;
+  border: 1px solid;
+  border-color: #207899;
+  background: #207890;
   color: white;
   outline: 0;
   transition: background 0.3s ease, color 0.3s ease;
